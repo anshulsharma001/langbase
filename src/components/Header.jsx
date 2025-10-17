@@ -1,0 +1,132 @@
+import React, { useState } from 'react';
+
+const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    return (
+        <header className="bg-black text-white border-b border-gray-800 flex justify-center">
+            <nav className="flex flex-col  lg:flex-row items-center justify-between w-full max-w-[95%] sm:max-w-[95%] lg:max-w-[64rem] xl:max-w-[80rem] mx-auto py-2.5 px-4 sm:px-5 lg:pr-2.5 fixed top-0 z-[2000] lg:rounded-[25px] md:backdrop-blur-xl sm:backdrop-blur-2xl lg:backdrop-blur-[8px] lg:bg-[rgba(0,0,0,.35)] rounded-[75px] backdrop-blur-[8px] bg-[rgba(0,0,0,.65)] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_2px_3px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.1),0_-1px_rgba(255,255,255,0.15)] mt-4 transition-all duration-200 ease-linear">
+                <div className="w-full lg:w-max px-2 sm:px-0 flex flex-col items-left justify-between">
+                    <div className="w-full lg:w-max flex justify-between items-center mr-4">
+                        <div className="opacity-100">
+                            <a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="691" height="137" fill="none" viewBox="0 0 691 137" className="w-[7rem] h-auto lg:w-[8rem]">
+                                    <path fill="#000" d="M0 66.796C0 35.308 0 19.564 9.782 9.782 19.564 0 35.308 0 66.796 0h2.536c31.488 0 47.232 0 57.014 9.782 9.782 9.782 9.782 25.526 9.782 57.014v2.536c0 31.488 0 47.232-9.782 57.014-9.782 9.782-25.526 9.782-57.014 9.782h-2.536c-31.488 0-47.232 0-57.014-9.782C0 116.564 0 100.82 0 69.332v-2.536z"></path>
+                                    <path fill="#fff" fillRule="evenodd" d="M69.332 5.566h-2.536c-15.901 0-27.267.012-35.905 1.173-8.477 1.14-13.489 3.295-17.173 6.979-3.684 3.684-5.839 8.695-6.979 17.173-1.16 8.638-1.173 20.004-1.173 35.905v2.536c0 15.901.012 27.267 1.173 35.905 1.14 8.477 3.295 13.488 6.979 17.173 3.684 3.684 8.695 5.838 17.173 6.978 8.638 1.161 20.004 1.173 35.905 1.173h2.536c15.901 0 27.267-.012 35.905-1.173 8.477-1.14 13.488-3.294 17.173-6.978 3.684-3.685 5.838-8.696 6.978-17.173 1.161-8.638 1.173-20.004 1.173-35.905v-2.536c0-15.901-.012-27.267-1.173-35.905-1.14-8.477-3.294-13.489-6.978-17.173-3.685-3.684-8.696-5.839-17.173-6.979-8.638-1.16-20.004-1.173-35.905-1.173zM9.782 9.782C0 19.564 0 35.308 0 66.796v2.536c0 31.488 0 47.232 9.782 57.014 9.782 9.782 25.526 9.782 57.014 9.782h2.536c31.488 0 47.232 0 57.014-9.782 9.782-9.782 9.782-25.526 9.782-57.014v-2.536c0-31.488 0-47.232-9.782-57.014C116.564 0 100.82 0 69.332 0h-2.536C35.308 0 19.564 0 9.782 9.782z" clipRule="evenodd"></path>
+                                    <path fill="#fff" d="M93.66 26.178c-8.982 0-16.288 7.307-16.288 16.29v6.98H58.756v-6.98c0-8.983-7.307-16.29-16.289-16.29-8.982 0-16.289 7.307-16.289 16.29 0 8.981 7.307 16.288 16.29 16.288h6.98v18.616h-6.98c-8.983 0-16.29 7.306-16.29 16.288 0 8.983 7.307 16.289 16.29 16.289 8.981 0 16.288-7.306 16.288-16.288V86.68h18.616v6.98c0 8.983 7.306 16.289 16.288 16.289 8.983 0 16.289-7.306 16.289-16.288 0-8.983-7.306-16.29-16.289-16.29h-6.98V58.757h6.98c8.983 0 16.289-7.307 16.289-16.289 0-8.982-7.306-16.289-16.289-16.289zm-6.98 23.27v-6.98a6.972 6.972 0 016.98-6.982 6.971 6.971 0 016.981 6.981 6.971 6.971 0 01-6.98 6.981H86.68zm-44.213 0a6.972 6.972 0 01-6.98-6.98 6.972 6.972 0 016.98-6.982 6.972 6.972 0 016.981 6.981v6.981h-6.98zm16.289 27.924V58.756h18.616v18.616H58.756zM93.66 100.64a6.971 6.971 0 01-6.98-6.98V86.68h6.98a6.971 6.971 0 016.981 6.98 6.971 6.971 0 01-6.98 6.981zm-51.193 0a6.971 6.971 0 01-6.98-6.98 6.972 6.972 0 016.98-6.981h6.981v6.98a6.971 6.971 0 01-6.98 6.981zM167.541 20.733h19.1v73.132h41.089v16.084h-60.189V20.733z"></path>
+                                    <path fill="#fff" d="M250.709 111.457c-7.121 0-12.859-1.634-17.215-4.901-4.272-3.267-6.409-7.748-6.409-13.445 0-5.78 1.801-10.304 5.404-13.57 3.602-3.352 9.172-5.781 16.712-7.289l21.738-4.272c0-8.796-3.853-13.194-11.56-13.194-6.953 0-11.058 3.225-12.314 9.675l-18.849-.88c1.257-7.371 4.566-12.942 9.927-16.711 5.361-3.854 12.44-5.78 21.236-5.78 10.053 0 17.634 2.387 22.744 7.162 5.11 4.775 7.665 11.77 7.665 20.984v22.995c0 1.843.293 3.1.879 3.77.587.67 1.55 1.005 2.891 1.005h1.884v12.943c-1.675.503-3.937.754-6.785.754-8.377 0-13.278-3.644-14.702-10.932-1.759 3.602-4.691 6.45-8.796 8.544-4.021 2.095-8.838 3.142-14.45 3.142zm4.523-12.943c4.775 0 8.587-1.382 11.435-4.146 2.848-2.765 4.272-6.534 4.272-11.31v-3.267l-15.33 3.268c-6.115 1.256-9.173 4.02-9.173 8.293 0 2.262.754 4.02 2.262 5.277 1.508 1.257 3.686 1.885 6.534 1.885zM296.875 42.597h16.963l.377 11.058c3.519-8.377 10.178-12.566 19.98-12.566 7.204 0 12.817 2.304 16.838 6.912 4.021 4.523 6.031 10.722 6.031 18.597v43.351h-18.848V72.88c0-5.696-.796-9.926-2.388-12.69-1.508-2.765-4.147-4.148-7.916-4.148-3.937 0-6.953 1.466-9.047 4.398-2.095 2.932-3.142 7.08-3.142 12.44v37.069h-18.848V42.597zM392.453 130.305c-9.215 0-16.419-1.675-21.613-5.026-5.194-3.351-8.586-7.958-10.178-13.822l19.351-1.382c.754 2.345 2.052 4.104 3.895 5.277 1.927 1.173 4.775 1.759 8.545 1.759 9.298 0 13.948-4.481 13.948-13.445v-7.162c-1.676 3.183-4.273 5.696-7.791 7.539-3.435 1.843-7.33 2.765-11.686 2.765-5.529 0-10.429-1.341-14.702-4.021-4.272-2.681-7.623-6.493-10.052-11.435-2.346-5.026-3.519-10.806-3.519-17.34 0-6.367 1.173-12.022 3.519-16.964 2.429-5.026 5.738-8.922 9.927-11.686 4.272-2.849 9.131-4.273 14.576-4.273 4.775 0 8.879 1.09 12.314 3.267 3.435 2.095 6.073 4.985 7.916 8.67V42.598h18.472v60.692c0 8.796-2.974 15.498-8.922 20.105-5.947 4.608-13.948 6.911-24 6.911zm-.126-37.445c4.356 0 7.791-1.718 10.304-5.152 2.597-3.435 3.895-8.168 3.895-14.2 0-5.696-1.298-10.22-3.895-13.57-2.597-3.351-6.031-5.026-10.304-5.026-4.44 0-7.958 1.717-10.555 5.151-2.513 3.435-3.77 8.043-3.77 13.823 0 5.78 1.299 10.387 3.896 13.822 2.597 3.434 6.073 5.152 10.429 5.152zM469.474 111.457c-4.691 0-8.796-.963-12.314-2.89-3.435-2.011-6.115-4.859-8.042-8.545l-.377 9.927h-17.969V20.733h18.849v31.414c1.843-3.267 4.481-5.906 7.916-7.916 3.518-2.095 7.497-3.142 11.937-3.142 5.613 0 10.514 1.466 14.702 4.398 4.272 2.849 7.539 6.953 9.801 12.315 2.346 5.277 3.519 11.434 3.519 18.471 0 7.037-1.173 13.236-3.519 18.597-2.262 5.278-5.529 9.383-9.801 12.315-4.188 2.848-9.089 4.272-14.702 4.272zm-5.277-14.45c4.272 0 7.665-1.844 10.178-5.53 2.513-3.685 3.77-8.754 3.77-15.204 0-6.45-1.257-11.518-3.77-15.204-2.429-3.686-5.78-5.53-10.053-5.53-4.607 0-8.209 1.844-10.806 5.53-2.597 3.602-3.895 8.67-3.895 15.204 0 6.45 1.256 11.519 3.769 15.205 2.597 3.686 6.199 5.528 10.807 5.528z"></path>
+                                    <path fill="#fff" d="M520.099 111.457c-7.12 0-12.859-1.634-17.215-4.901-4.272-3.267-6.408-7.748-6.408-13.445 0-5.78 1.801-10.304 5.403-13.57 3.602-3.352 9.173-5.781 16.712-7.289l21.739-4.272c0-8.796-3.854-13.194-11.561-13.194-6.953 0-11.057 3.225-12.314 9.675l-18.848-.88c1.256-7.371 4.565-12.942 9.926-16.711 5.362-3.854 12.44-5.78 21.236-5.78 10.053 0 17.634 2.387 22.744 7.162 5.11 4.775 7.665 11.77 7.665 20.984v22.995c0 1.843.293 3.1.88 3.77.586.67 1.55 1.005 2.89 1.005h1.885v12.943c-1.676.503-3.938.754-6.786.754-8.377 0-13.277-3.644-14.702-10.932-1.759 3.602-4.691 6.45-8.795 8.544-4.021 2.095-8.838 3.142-14.451 3.142zm4.524-12.943c4.775 0 8.586-1.382 11.434-4.146 2.849-2.765 4.273-6.534 4.273-11.31v-3.267L525 83.06c-6.116 1.256-9.173 4.02-9.173 8.293 0 2.262.754 4.02 2.262 5.277 1.507 1.257 3.686 1.885 6.534 1.885z"></path>
+                                    <path fill="#fff" d="M594.552 111.457c-10.052 0-17.843-2.052-23.372-6.157-5.445-4.189-8.419-9.718-8.921-16.587l19.099-.628c1.173 6.702 5.613 10.052 13.32 10.052 3.435 0 6.073-.544 7.916-1.633 1.843-1.173 2.765-2.848 2.765-5.026 0-1.508-.377-2.723-1.131-3.644-.67-.922-2.011-1.718-4.021-2.388-1.927-.754-4.775-1.424-8.545-2.01-7.12-1.173-12.691-2.597-16.712-4.273-4.021-1.759-6.869-3.937-8.545-6.534-1.675-2.597-2.513-5.906-2.513-9.927 0-6.618 2.555-11.853 7.665-15.707 5.11-3.937 12.524-5.906 22.241-5.906 9.132 0 16.252 2.095 21.362 6.283 5.194 4.189 8.21 9.801 9.047 16.838l-18.848.754c-.419-3.35-1.676-5.948-3.77-7.79-2.01-1.844-4.691-2.765-8.042-2.765-3.267 0-5.822.67-7.665 2.01-1.759 1.34-2.639 3.184-2.639 5.53 0 2.429.922 4.272 2.765 5.528 1.843 1.173 5.11 2.094 9.801 2.765 7.204 1.005 12.901 2.387 17.089 4.146 4.189 1.76 7.204 3.98 9.047 6.66 1.843 2.68 2.765 6.032 2.765 10.053 0 6.45-2.681 11.476-8.042 15.078-5.361 3.519-12.733 5.278-22.116 5.278z"></path>
+                                    <path fill="#fff" d="M657.429 111.457c-6.786 0-12.734-1.424-17.844-4.272-5.11-2.932-9.089-7.037-11.937-12.315-2.764-5.361-4.147-11.56-4.147-18.597 0-7.037 1.383-13.194 4.147-18.471 2.765-5.362 6.702-9.466 11.812-12.315 5.11-2.932 11.057-4.398 17.843-4.398 6.618 0 12.398 1.466 17.34 4.398 5.027 2.932 8.88 7.163 11.561 12.692 2.681 5.445 4.021 11.895 4.021 19.35v3.77h-47.247c.168 5.194 1.55 9.131 4.147 11.812 2.597 2.68 6.157 4.021 10.681 4.021 6.534 0 10.722-2.723 12.565-8.168l18.974 1.131c-1.843 6.702-5.612 11.938-11.309 15.707-5.612 3.77-12.482 5.655-20.607 5.655zm13.57-41.718c-.251-4.775-1.591-8.419-4.021-10.932-2.429-2.513-5.654-3.77-9.675-3.77-3.937 0-7.204 1.299-9.801 3.896-2.513 2.596-4.021 6.199-4.524 10.806h28.021z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <button type="button" className="lg:hidden inline-flex items-center justify-center py-2 rounded-md text-white">
+                            <span className="sr-only">Open main menu</span>
+                            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div className="hidden sm:flex items-center justify-between flex-1">
+                    <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center">
+                        <div>
+                            <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
+                                <li>
+                                    <button 
+                                        id="radix-:r2t6:-trigger-radix-:r2t7:" 
+                                        data-state="closed" 
+                                        aria-expanded="false" 
+                                        aria-controls="radix-:r2t6:-content-radix-:r2t7:" 
+                                        className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background group text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" 
+                                        data-radix-collection-item=""
+                                    >
+                                        Products 
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true">
+                                            <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="https://command.new" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                            Command
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/docs" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                            Docs
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/solutions" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[1024px]:block" data-radix-collection-item="">
+                                            Solutions
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/about" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                            About
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/customers" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[920px]:block" data-radix-collection-item="">
+                                            Customers
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/pricing" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                            Pricing
+                                        </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/contact" target="_blank">
+                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[920px]:block" data-radix-collection-item="">
+                                            Contact
+                                        </a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="absolute left-0 top-full flex justify-center"></div>
+                    </nav>
+                    <div className="flex items-center space-x-1">
+                        <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center min-[640px]:hidden min-[700px]:block">
+                            <div>
+                                <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
+                                    <li>
+                                        <a href="/login" target="_blank">
+                                            <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background transition-colors ease-in-out duration-200" data-radix-collection-item="">
+                                                Login
+                                            </a>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="absolute left-0 top-full flex justify-center"></div>
+                        </nav>
+                        <a href="/signup" target="_blank" className="group bg-white/75 text-black hover:bg-gray-200 rounded-full text-sm font-medium flex items-center justify-center gap-1 px-4 py-2 transition-colors ease-in-out duration-200 bg-gradient-to-b from-black to-gray-300/80 dark:from-white dark:to-slate-900/20 hover:animate-pulse">
+                            <span className="shrink-0">Start free</span>
+                            <svg className="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L13.6464 10.2322C14.6228 11.2085 14.6228 12.7915 13.6464 13.7678L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.2322 12.3536C12.4275 12.1583 12.4275 11.8417 12.2322 11.6464L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
+};
+
+export default Header;

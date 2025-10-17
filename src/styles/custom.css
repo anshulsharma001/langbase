@@ -1,0 +1,15 @@
+ 
+/* Marquee handled by react-fast-marquee */
+
+/* Animated SVG path (moving dashed line) */
+.animated-line {
+	stroke-dasharray: 10 12; /* dash length, gap length */
+	stroke-linecap: round;
+	animation: path-move 4s linear infinite;
+}
+
+@keyframes path-move {
+	to {
+		stroke-dashoffset: -300;
+	}
+}

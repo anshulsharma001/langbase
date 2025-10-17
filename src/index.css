@@ -31,4 +31,29 @@
   --color-sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
   --color-sidebar-border: hsl(240, 3.7%, 15.9%);
   --color-sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+    --font-inter: "Inter", sans-serif;
+  --animate-scale: scaler 550ms linear;
+
+  @keyframes scaler {
+    0% {
+      scale: 0.8;
+      transform:translatey(-25%);
+    }
+    100% {
+      scale: 1.05;
+      transform:translatey(0%)
+    }}
+}
+
+@media (min-width: 1280px) and (max-width: 1360px) {
+  .tabsbox {
+    margin: 0px 50px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .tabsbox {
+    margin: auto;
+    max-width: 1296px;
+  }
 }
