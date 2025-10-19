@@ -29,7 +29,7 @@ const DeveloperPics = () => {
     <section
       style={{ opacity: 1, filter: 'blur(0px)', willChange: 'auto', transform: 'translateY(-6px)' }}
     >
-      <div className="DeveloperPics mx-auto mb-20 max-w-7xl px-6 lg:px-8 flex flex-col items-center justify-center w-full ">
+      <div className="DeveloperPics max-sm:hidden mx-auto mb-20 max-w-7xl px-6 lg:px-8 flex flex-col items-center justify-center w-full ">
         <div className="z-10 flex -space-x-4 rtl:space-x-reverse -ml-10 sm:ml-0">
           {avatars.map((user, i) => (
             <img

@@ -16,10 +16,10 @@ const Pagination = () => {
         >
           Making AI accessible to everyone
         </p>
-        <h2 class="mt-2 text-3xl sm:text-6xl font-inter font-bold tracking-tight text-foreground text-white">
+        <h2 className="mt-2 text-3xl sm:text-6xl font-inter font-bold tracking-tight text-foreground text-white">
           ⌘ Langbase Studio
         </h2>
-        <p class="mt-6 text-base md:text-lg font-inter text-center md:leading-8 text-gray-500">
+        <p className="mt-6 text-base md:text-lg font-inter text-center md:leading-8 text-gray-500">
           Explore our serverless AI cloud and APIs in Studio without writing a
           single line of code. Run agents, modify prompts, real-time collab,
           complete observability. From developers to CxOs, everyone's in the
