@@ -2,11 +2,11 @@ import React from "react";
 
 export default function MemoryCard() {
   return (
-    <section className="w-full py-12 sm:py-16">
+    <section className="w-[50%] py-12 sm:py-16">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="group relative row-span-1 col-span-4 lg:col-span-2 h-full cursor-pointer flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu">
           <div className="w-full h-full z-[1]">
-            <div className="absolute inset-0 top-5 origin-top transition-all duration-300 ease-out group-hover:scale-105 flex justify-center items-center w-full">
+            <div className=" inset-0 top-5 origin-top transition-all duration-300 ease-out group-hover:scale-105 flex justify-center items-center w-full">
               <div className="relative flex w-full mt-1 mx-6 h-3/5 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)]">
                 <span className="pointer-events-none mt-4 text-[5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-transparent font-semibold leading-none dark:from-white dark:to-slate-900/10">
                   Memory
@@ -38,7 +38,7 @@ export default function MemoryCard() {
             </div>
           </div>
 
-          <div className="pointer-events-none flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+          <div className="pointer-events-none flex transform-gpu z-10 flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
             <h3 className="text-[1.1rem] sm:text-[1.25rem] font-semibold text-[#FAFAFA]">Memory</h3>
             <p className="mt-1 pr-[1rem] max-w-lg text-muted-foreground/90 line-clamp-2 sm:line-clamp-none">
               Serverless zero-config semantic RAG with industry leading accuracy in retrieval, augmentation, and semantic chunking.

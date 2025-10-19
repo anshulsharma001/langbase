@@ -20,6 +20,7 @@ import ComposableAI from './components/ComposableAI'
 import AgenticSolutions from './components/AgenticSolutions'
 import Stats from './components/Stats'
 import ServerlessHero from './components/ServerlessHero'
+import Keysets from './components/Keysets'
 
 function App() {
   return (
@@ -34,11 +35,13 @@ function App() {
   <div class="mb-16 md:mb-32 lg:mb-48"></div>
    <Marquee />
    <div class="mb-16 md:mb-32 lg:mb-48"></div>
-  
-    
-  
+  <MemoryAPI/>
+    <UnifiedAPI/>
     <MemoryCard />
     <ExploreAgents />
+    <Collaborate/>
+    <Keysets/>
+    
      <Pagination/>
       <About/> 
       <ComposableAI/>

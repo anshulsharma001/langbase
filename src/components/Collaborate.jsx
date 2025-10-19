@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Collaborate() {
   return (
-    <section className="w-full py-12 sm:py-16">
+    <section className="w-[25%] py-12 sm:py-16">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="group relative col-span-4 row-span-1 flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu lg:col-span-1">
           {/* Floating user badges */}
           <div className="h-full w-full z-[1]">
-            <div className="absolute w-full select-none">
+            <div className=" w-full select-none">
               <div className="relative" style={{ cursor: "none" }}>
                 <div className="relative h-64 w-full">
                   {/* Badge 1 */}
