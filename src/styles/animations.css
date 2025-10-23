@@ -1,0 +1,20 @@
+/* Rotating rings animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-rotate {
+  animation: rotate var(--duration, 20s) linear infinite;
+  transform-origin: center;
+}
+
+.animate-rotate-reverse {
+  animation: rotate-reverse var(--duration, 25s) linear infinite;
+  transform-origin: center;
+}

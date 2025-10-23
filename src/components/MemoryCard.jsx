@@ -2,9 +2,9 @@ import React from "react";
 
 export default function MemoryCard() {
   return (
-    <section className="w-[50%] py-12 sm:py-16">
+    <section className="group h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-2">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="group relative row-span-1 col-span-4 lg:col-span-2 h-full cursor-pointer flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu">
+        <div className="group relative  ">
           <div className="w-full h-full z-[1]">
             <div className=" inset-0 top-5 origin-top transition-all duration-300 ease-out group-hover:scale-105 flex justify-center items-center w-full">
               <div className="relative flex w-full mt-1 mx-6 h-3/5 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)]">

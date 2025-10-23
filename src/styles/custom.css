@@ -38,15 +38,19 @@
 }
 
 /* Orbit animation for AIPipes icons */
-.animate-orbit {
-	position: absolute;
-	/* --radius in px, --duration in seconds, --delay in seconds */
-	--radius: 175px;
-	--duration: 20s;
-	--delay: 0s;
-	transform-origin: center;
-	animation: orbit var(var(--duration, 20s)) linear infinite;
-	animation-delay: var(--delay, 0s);
+/* Rotating Rings Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  transform-origin: center;
+  animation: rotate var(--duration) linear infinite;
 }
 
 @keyframes orbit {
@@ -102,4 +106,90 @@
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
+}
+
+
+.rotating-ring {
+  position: relative;
+  animation: rotate var(--duration) linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ring-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit var(--duration) linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(50%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50%) rotate(-360deg);
+  }
+}
+
+/* Grid animation for ExploreSection */
+.animate-grid {
+  animation: grid-move 8s linear infinite;
+  will-change: transform;
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(120px, 60px);
+  }
+  50% {
+    transform: translate(240px, 120px);
+  }
+  75% {
+    transform: translate(120px, 180px);
+  }
+  100% {
+    transform: translate(0, 240px);
+  }
+}
+
+/* Pulse animation for SVG paths - using SVG animateMotion instead */
+
+/* Pulse dot styling */
+.pulse-dot {
+  filter: blur(1px) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: blur(0.5px) drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    filter: blur(2px) drop-shadow(0 0 16px rgba(255, 255, 255, 1));
+  }
+}
+
+/* Responsive SVG stroke width */
+@media (max-width: 640px) {
+  .sm\:stroke-\[0\.7\] {
+    stroke-width: 0.5 !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .sm\:stroke-\[0\.7\] {
+    stroke-width: 0.7 !important;
+  }
 }

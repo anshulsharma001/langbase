@@ -3,8 +3,8 @@ import React from "react";
 // Memory API feature card with horizontal marquee rows and hover reveal CTA
 export default function MemoryAPI() {
   return (
-    <section className="w-[25%] py-12 sm:py-16">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="group h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-1">
+      <div className="mx-auto w-full max-w-7xl ">
         <div className="group relative row-span-1 col-span-4 lg:col-span-1 flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu">
           {/* Scrolling rows */}
           <div className="w-full h-full z-[1]">
