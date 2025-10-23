@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+     const toggleMenu = () => {
+         setIsMenuOpen(!isMenuOpen);
+     };
 
     return (
         <header className="bg-black text-white border-b border-gray-800 flex justify-center">
-            <nav className="flex flex-col  lg:flex-row items-center justify-between w-full max-w-[95%] sm:max-w-[95%] lg:max-w-[64rem] xl:max-w-[80rem] mx-auto py-2.5 px-4 sm:px-5 lg:pr-2.5 fixed top-0 z-[2000] lg:rounded-[25px] md:backdrop-blur-xl sm:backdrop-blur-2xl lg:backdrop-blur-[8px] lg:bg-[rgba(0,0,0,.35)] rounded-[75px] backdrop-blur-[8px] bg-[rgba(0,0,0,.65)] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_2px_3px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.1),0_-1px_rgba(255,255,255,0.15)] mt-4 transition-all duration-200 ease-linear">
+            <nav className="flex flex-col  lg:flex-row items-center justify-between w-full max-w-[95%] sm:max-w-[95%] lg:max-w-[64rem] xl:max-w-[80rem] mx-auto py-2.5 px-4 sm:px-5 lg:pr-2.5 fixed top-0 z-[2000] lg:rounded-[25px] md:backdrop-blur-xl sm:backdrop-blur-2xl lg:backdrop-blur-[8px] lg:bg-[rgba(0,0,0,.35)] rounded-[25px] backdrop-blur-[8px] bg-[rgba(0,0,0,.65)] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_2px_3px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.1),0_-1px_rgba(255,255,255,0.15)] mt-4 transition-all duration-200 ease-linear">
                 <div className="w-full lg:w-max px-2 sm:px-0 flex flex-col items-left justify-between">
                     <div className="w-full lg:w-max flex justify-between items-center mr-4">
                         <div className="opacity-100">
@@ -21,109 +25,127 @@ const Header = () => {
                                 </svg>
                             </a>
                         </div>
-                        <button type="button" className="lg:hidden inline-flex items-center justify-center py-2 rounded-md text-white">
-                            <span className="sr-only">Open main menu</span>
-                            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
+                         <button 
+                             type="button" 
+                             className="lg:hidden inline-flex items-center justify-center py-2 rounded-md text-white"
+                             onClick={toggleMenu}
+                         >
+                             <span className="sr-only">Open main menu</span>
+                             <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                             </svg>
+                         </button>
                     </div>
                 </div>
-                <div className="hidden sm:flex items-center justify-between flex-1">
-                    <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center">
-                        <div>
-                            <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
-                                <li>
-                                    <button 
-                                        id="radix-:r2t6:-trigger-radix-:r2t7:" 
-                                        data-state="closed" 
-                                        aria-expanded="false" 
-                                        aria-controls="radix-:r2t6:-content-radix-:r2t7:" 
-                                        className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background group text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" 
-                                        data-radix-collection-item=""
-                                    >
-                                        Products 
-                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true">
-                                            <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </li>
-                                <li>
-                                    <a href="https://command.new" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
-                                            Command
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/docs" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
-                                            Docs
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/solutions" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[1024px]:block" data-radix-collection-item="">
-                                            Solutions
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/about" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
-                                            About
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/customers" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[920px]:block" data-radix-collection-item="">
-                                            Customers
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/pricing" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
-                                            Pricing
-                                        </a>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/contact" target="_blank">
-                                        <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background sm:hidden min-[920px]:block" data-radix-collection-item="">
-                                            Contact
-                                        </a>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="absolute left-0 top-full flex justify-center"></div>
-                    </nav>
-                    <div className="flex items-center space-x-1">
-                        <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center min-[640px]:hidden min-[700px]:block">
-                            <div>
-                                <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
-                                    <li>
-                                        <a href="/login" target="_blank">
-                                            <a className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background transition-colors ease-in-out duration-200" data-radix-collection-item="">
-                                                Login
-                                            </a>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="absolute left-0 top-full flex justify-center"></div>
-                        </nav>
-                        <a href="/signup" target="_blank" className="group bg-white/75 text-black hover:bg-gray-200 rounded-full text-sm font-medium flex items-center justify-center gap-1 px-4 py-2 transition-colors ease-in-out duration-200 bg-gradient-to-b from-black to-gray-300/80 dark:from-white dark:to-slate-900/20 hover:animate-pulse">
-                            <span className="shrink-0">Start free</span>
-                            <svg className="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L13.6464 10.2322C14.6228 11.2085 14.6228 12.7915 13.6464 13.7678L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.2322 12.3536C12.4275 12.1583 12.4275 11.8417 12.2322 11.6464L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                 {/* Desktop Navigation - Hidden below 1024px, visible on desktop only */}
+                 <div className="hidden lg:flex items-center justify-between flex-1">
+                     <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center">
+                         <div>
+                             <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
+                                 <li>
+                                     <button 
+                                         id="radix-:r2t6:-trigger-radix-:r2t7:" 
+                                         data-state="closed" 
+                                         aria-expanded="false" 
+                                         aria-controls="radix-:r2t6:-content-radix-:r2t7:" 
+                                         className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background group text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" 
+                                         data-radix-collection-item=""
+                                     >
+                                         Products 
+                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true">
+                                             <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
+                                         </svg>
+                                     </button>
+                                 </li>
+                                 <li>
+                                     <a href="https://command.new" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                         Command
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/docs" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                         Docs
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/solutions" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background hidden lg:flex" data-radix-collection-item="">
+                                         Solutions
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/about" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                         About
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/customers" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background hidden xl:flex" data-radix-collection-item="">
+                                         Customers
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/pricing" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
+                                         Pricing
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/contact" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background hidden xl:flex" data-radix-collection-item="">
+                                         Contact
+                                     </a>
+                                 </li>
+                             </ul>
+                         </div>
+                         <div className="absolute left-0 top-full flex justify-center"></div>
+                     </nav>
+                     <div className="flex items-center space-x-1">
+                         <a href="/login" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background transition-colors ease-in-out duration-200" data-radix-collection-item="">
+                             Login
+                         </a>
+                         <a href="/signup" target="_blank" className="group bg-white/75 text-black hover:bg-gray-200 rounded-full text-sm font-medium flex items-center justify-center gap-1 px-3 md:px-4 py-2 transition-colors ease-in-out duration-200 bg-gradient-to-b from-black to-gray-300/80 dark:from-white dark:to-slate-900/20 hover:animate-pulse">
+                             <span className="shrink-0">Start free</span>
+                             <svg className="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                 <path fillRule="evenodd" clipRule="evenodd" d="M9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L13.6464 10.2322C14.6228 11.2085 14.6228 12.7915 13.6464 13.7678L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.2322 12.3536C12.4275 12.1583 12.4275 11.8417 12.2322 11.6464L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289Z" fill="currentColor"></path>
+                             </svg>
+                         </a>
+                     </div>
+                 </div>
+
+                 {/* Mobile Menu - Visible below 1024px (mobile and tablet) */}
+                 <div className={`w-full max-h-[80vh] flex-col overflow-scroll px-2 py-0 lg:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}>
+                     <div className="flex-1 mt-6 w-full flex flex-col items-start justify-start space-y-4">
+                         <div className="w-full">
+                             <button className="w-full text-left text-white/50 hover:text-white transition-colors ease-in-out duration-200 text-lg font-medium flex justify-between items-center py-2">
+                                 Products
+                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                                     <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
+                                 </svg>
+                             </button>
+                         </div>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="https://command.new" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Command</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/docs" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Docs</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/solutions" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Solutions</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/about" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">About</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/customers" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Customers</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/pricing" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Pricing</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                         <a href="/contact" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Contact</a>
+                         <div className="w-full h-[1px] bg-white/15"></div>
+                     </div>
+                     <div className="flex-1 w-full py-8 pb-6 flex flex-col items-center justify-center space-y-6">
+                         <a href="/login" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium text-center py-2">Login</a>
+                         <a href="/signup" target="_blank" className="group bg-white/75 text-black hover:bg-gray-200 rounded-full text-lg font-medium flex items-center justify-center gap-1 w-full px-6 py-2.5">
+                             <span className="shrink-0">Start free</span>
+                             <svg className="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                 <path fillRule="evenodd" clipRule="evenodd" d="M9.29289 7.29289C9.68342 6.90237 10.3166 6.90237 10.7071 7.29289L13.6464 10.2322C14.6228 11.2085 14.6228 12.7915 13.6464 13.7678L10.7071 16.7071C10.3166 17.0976 9.68342 17.0976 9.29289 16.7071C8.90237 16.3166 8.90237 15.6834 9.29289 15.2929L12.2322 12.3536C12.4275 12.1583 12.4275 11.8417 12.2322 11.6464L9.29289 8.70711C8.90237 8.31658 8.90237 7.68342 9.29289 7.29289Z" fill="currentColor"></path>
+                             </svg>
+                         </a>
+                     </div>
+                 </div>
             </nav>
         </header>
     );
