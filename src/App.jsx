@@ -42,7 +42,7 @@ function App() {
    <div class="px-4 md:px-8 lg:px-16">
     <DeveloperExperience />
     </div> 
-   <div class="grid w-full h-full auto-rows-[22rem] grid-cols-4 gap-5  w-full max-w-[95%] sm:max-w-[95%] lg:max-w-[64rem] xl:max-w-[80rem] mx-auto">
+   <div class="grid w-full h-full auto-rows-[22rem] grid-cols-4 gap-5 px-4 md:px-8  w-full max-w-[95%] sm:max-w-[95%] lg:max-w-[64rem] xl:max-w-[80rem] mx-auto">
       <MemoryAPI/>
     <UnifiedAPI/>
       <AIPipes/> 

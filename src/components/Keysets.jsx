@@ -2,7 +2,7 @@ import React from 'react'
 
 const Keysets = () => {
   return (
-    <section className="group h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-1">
+    <section className="group text-white h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-1">
       <div className="w-full h-full z-1">
         <div className="absolute mt-2 mx-2 top-0 inset-2 origin-top [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]">
           <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-col absolute [--duration:20s]">
@@ -19,7 +19,7 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Together" src="/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Together" src="https://langbase.com/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Together</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
@@ -35,70 +35,70 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Google" src="/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Google" src="https://langbase.com/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Google</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Groq" src="/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Groq" src="https://langbase.com/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Groq</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Cohere" src="/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Cohere" src="https://langbase.com/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Cohere</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Fireworks AI" src="/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Fireworks AI" src="https://langbase.com/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Fireworks AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Perplexity" src="/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Perplexity" src="https://langbase.com/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Perplexity</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Mistral AI" src="/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Mistral AI" src="https://langbase.com/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Mistral AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="xAI" src="/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="xAI" src="https://langbase.com/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>xAI</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Deepseek" src="/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Deepseek" src="https://langbase.com/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Deepseek</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="OpenRouter" src="/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="OpenRouter" src="https://langbase.com/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>OpenRouter</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Azure OpenAI" src="/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Azure OpenAI" src="https://langbase.com/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Azure OpenAI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
@@ -118,7 +118,7 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Together" src="/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Together" src="https://langbase.com/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Together</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
@@ -134,70 +134,70 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Google" src="/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Google" src="https://langbase.com/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Google</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Groq" src="/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Groq" src="https://langbase.com/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Groq</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Cohere" src="/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Cohere" src="https://langbase.com/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Cohere</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Fireworks AI" src="/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Fireworks AI" src="https://langbase.com/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Fireworks AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Perplexity" src="/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Perplexity" src="https://langbase.com/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Perplexity</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Mistral AI" src="/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Mistral AI" src="https://langbase.com/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Mistral AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="xAI" src="/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="xAI" src="https://langbase.com/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>xAI</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Deepseek" src="/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Deepseek" src="https://langbase.com/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Deepseek</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="OpenRouter" src="/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="OpenRouter" src="https://langbase.com/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>OpenRouter</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Azure OpenAI" src="/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Azure OpenAI" src="https://langbase.com/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Azure OpenAI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
@@ -217,7 +217,7 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Together" src="/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Together" src="https://langbase.com/logos/together.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Together</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
@@ -233,70 +233,70 @@ const Keysets = () => {
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Google" src="/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Google" src="https://langbase.com/logos/google.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Google</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Groq" src="/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Groq" src="https://langbase.com/logos/groq.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Groq</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Cohere" src="/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Cohere" src="https://langbase.com/logos/cohere.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Cohere</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Fireworks AI" src="/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Fireworks AI" src="https://langbase.com/logos/fireworks.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Fireworks AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Perplexity" src="/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Perplexity" src="https://langbase.com/logos/perplexity.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Perplexity</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Mistral AI" src="/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Mistral AI" src="https://langbase.com/logos/mistral.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Mistral AI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="xAI" src="/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="xAI" src="https://langbase.com/logos/xai.svg" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>xAI</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Deepseek" src="/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Deepseek" src="https://langbase.com/logos/deepseek.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Deepseek</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="OpenRouter" src="/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="OpenRouter" src="https://langbase.com/logos/openrouter.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>OpenRouter</span>
                   </span>
                   <div className="text-muted-foreground/80 bg-muted ring-border transition-colors flex-none rounded-[.5rem] px-2 py-1 font-medium ring-1 ring-inset text-xs uppercase">Add key</div>
                 </button>
                 <button className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group border border-input text-foreground hover:bg-foreground h-14 hover:text-background group w-full mt-2 px-4 py-6 shadow-inner bg-muted rounded-[1rem]">
                   <span className="w-full flex space-x-2 items-center text-left text-sm select-none">
-                    <img width="16" height="16" alt="Azure OpenAI" src="/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
+                    <img width="16" height="16" alt="Azure OpenAI" src="https://langbase.com/logos/azure.png" className="size-4 align-middle block flex-shrink-0" aria-hidden="true" />
                     <span>Azure OpenAI</span>
                   </span>
                   <div className="text-green-600 bg-green-600/10 ring-green-600/30 dark:text-green-400 dark:bg-green-400/10 dark:ring-green-400/30 flex-none rounded-[.5rem] px-2 py-1 text-[.75rem] font-medium ring-1 ring-inset group-hover:bg-green-900 transition-colors">LIVE</div>
