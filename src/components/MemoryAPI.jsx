@@ -37,7 +37,7 @@ export default function MemoryAPI() {
           </div>
 
           {/* Title & subtitle */}
-          <div className="pointer-events-none flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+          <div className="pointer-events-none flex transform-gpu flex-col gap-1 p-6 transition-all -translate-y-10 duration-300 group-hover:-translate-y-16">
             <h3 className="text-[1.1rem] sm:text-[1.25rem] font-semibold text-[#FAFAFA]">
               Memory API
             </h3>
@@ -47,7 +47,7 @@ export default function MemoryAPI() {
           </div>
 
           {/* Hover CTA */}
-          <div className="pointer-events-none absolute bottom-0 z-[999] flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <div className="pointer-events-none absolute bottom-0 z-[999] flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:-translate-y-6 group-hover:opacity-100">
             <a
               href="https://langbase.com/docs/memory"
               target="_blank"
