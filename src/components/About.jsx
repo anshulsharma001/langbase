@@ -92,7 +92,7 @@ const About = () => {
                   <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 rounded-3xl px-6 py-4 sm:flex-nowrap shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)]">
                     <img
                       alt="Stephen Gregorowicz"
-                      src="/www/review/stephan.png"
+                      src="	https://langbase.com/www/review/stephan.png"
                       className="h-10 w-10 flex-none rounded-full bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] select-none"
                     />
                     <div className="flex-auto">
@@ -105,7 +105,7 @@ const About = () => {
                     </div>
                     <img
                       alt="Logo of HaveIgnition.com"
-                      src="/customers/liquidweb.svg"
+                      src="	https://langbase.com/customers/liquidweb.svg"
                       className="h-6 w-auto flex-none"
                     />
                   </figcaption>

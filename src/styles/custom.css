@@ -89,6 +89,17 @@
 	animation-play-state: running !important;
 }
 
+/* Vertical marquee animation utility class */
+.animate-marquee-vertical {
+	animation: vertical-scroll var(--duration, 20s) linear infinite;
+	animation-play-state: paused;
+	will-change: transform;
+}
+
+.group:hover .animate-marquee-vertical {
+	animation-play-state: running !important;
+}
+
 @keyframes vertical-scroll {
 	0% {
 		transform: translateY(0);
@@ -133,10 +144,10 @@
 
 @keyframes orbit {
   from {
-    transform: rotate(0deg) translateX(50%) rotate(0deg);
+    transform: rotate(0deg) translateX(calc(var(--radius, 100px))) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(50%) rotate(-360deg);
+    transform: rotate(360deg) translateX(calc(var(--radius, 100px))) rotate(-360deg);
   }
 }
 

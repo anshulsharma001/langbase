@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 
 const Header = () => {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
+     const [isProductsOpen, setIsProductsOpen] = useState(false);
 
      const toggleMenu = () => {
          setIsMenuOpen(!isMenuOpen);
+     };
+
+     const toggleProducts = () => {
+         setIsProductsOpen(!isProductsOpen);
      };
 
     return (
@@ -42,20 +47,106 @@ const Header = () => {
                      <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="relative z-10 flex max-w-max flex-1 items-center justify-center">
                          <div>
                              <ul data-orientation="horizontal" className="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr">
-                                 <li>
+                                 <li className="relative group">
                                      <button 
-                                         id="radix-:r2t6:-trigger-radix-:r2t7:" 
-                                         data-state="closed" 
-                                         aria-expanded="false" 
-                                         aria-controls="radix-:r2t6:-content-radix-:r2t7:" 
+                                         onClick={toggleProducts}
+                                         onMouseEnter={() => setIsProductsOpen(true)}
+                                         onMouseLeave={() => setIsProductsOpen(false)}
                                          className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background group text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" 
-                                         data-radix-collection-item=""
                                      >
                                          Products 
-                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true">
+                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className={`relative top-[1px] ml-1 h-3 w-3 transition duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} aria-hidden="true">
                                              <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
                                          </svg>
                                      </button>
+                                     
+                                     {/* Products Dropdown */}
+                                     <div 
+                                         className={`absolute left-0 top-full flex justify-center z-50 transition-all duration-200 ${isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                                         onMouseEnter={() => setIsProductsOpen(true)}
+                                         onMouseLeave={() => setIsProductsOpen(false)}
+                                     >
+                                         {isProductsOpen && (
+                                             <div className="origin-top-center relative mt-4 h-auto w-full overflow-hidden rounded-3xl  bg-popover text-popover-foreground animate-in zoom-in-90 md:w-[500px] shadow-[0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:shadow-[0_2px_3px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.1),0_-1px_rgba(255,255,255,0.15)]">
+                                                 <div className="left-0 top-0 w-full animate-in fade-in">
+                                                     <ul className="grid w-full gap-3 p-4 md:grid-cols-1">
+                                                         <li>
+                                                             <a className="flex select-none space-x-2 p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background rounded-[16px] justify-start items-center group" href="https://command.new">
+                                                                 <div className="size-12 bg-white/10 flex items-center justify-center px-1 rounded-xl min-w-[40px]">
+                                                                     <svg className="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                         <path d="M13 9.99989H18C18.5 8.99989 18 7.49989 18 7.49989L20.5379 7.70041C21.3806 7.76699 21.933 6.81384 21.4276 6.13617C20.385 4.73813 19.1707 3.43422 17.4966 2.91915C13.5483 1.70438 13.0654 7.49759 13 9.99989Z" fill="currentColor"></path>
+                                                                         <path d="M3 10.9999C2.44772 10.9999 2 11.4476 2 11.9999C2 12.5522 2.44772 12.9999 3 12.9999H4V17.9999C4 20.209 5.79086 21.9999 8 21.9999H16C18.2091 21.9999 20 20.209 20 17.9999V12.9999H21C21.5523 12.9999 22 12.5522 22 11.9999C22 11.4476 21.5523 10.9999 21 10.9999H3Z" fill="currentColor"></path>
+                                                                         <path d="M6 9.99989H11C10.7409 6.67343 9.84142 3.89667 7.94014 1.38552C7.50427 0.809827 6.62994 0.951013 6.38068 1.62871C5.43865 4.18998 5.15408 6.61621 6 9.99989Z" fill="currentColor"></path>
+                                                                     </svg>
+                                                                 </div>
+                                                                 <div>
+                                                                     <div className="text-sm font-medium leading-none">Command <span className="font-normal text-muted-foreground/80">(Vibe code any AI agent)</span></div>
+                                                                     <p className="line-clamp-2 text-sm leading-snug text-[#a1a1aa]   mt-1">Command turns prompts into prod-ready agents.</p>
+                                                                 </div>
+                                                             </a>
+                                                         </li>
+                                                         <li>
+                                                             <a className="flex select-none space-x-2 p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background rounded-[16px] justify-start items-center group" href="https://langbase.com/docs/pipe">
+                                                                 <div className="size-12 bg-white/10 flex items-center justify-center px-1 rounded-xl min-w-[40px]">
+                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-6">
+                                                                         <path fillRule="evenodd" clipRule="evenodd" d="M2.25 4.125C2.25 3.08947 3.08947 2.25 4.125 2.25H9.375C10.4105 2.25 11.25 3.08947 11.25 4.125V17.25C11.25 19.7353 9.23528 21.75 6.75 21.75C4.26472 21.75 2.25 19.7353 2.25 17.25V4.125ZM6.75 18.375C7.37132 18.375 7.875 17.8713 7.875 17.25C7.875 16.6287 7.37132 16.125 6.75 16.125C6.12868 16.125 5.625 16.6287 5.625 17.25C5.625 17.8713 6.12868 18.375 6.75 18.375Z" fill="currentColor"></path>
+                                                                         <path d="M10.719 21.75H19.8751C20.9106 21.75 21.7501 20.9105 21.7501 19.875V14.625C21.7501 13.5895 20.9106 12.75 19.8751 12.75H19.7353L10.9927 21.4926C10.9035 21.5818 10.8122 21.6676 10.719 21.75Z" fill="currentColor"></path>
+                                                                         <path d="M12.7383 17.6255L19.2125 11.1512C19.9448 10.419 19.9448 9.23179 19.2125 8.49955L15.5002 4.78724C14.768 4.05501 13.5808 4.05501 12.8486 4.78724L12.7498 4.88598V17.25C12.7498 17.3761 12.7459 17.5013 12.7383 17.6255Z" fill="currentColor"></path>
+                                                                     </svg>
+                                                                 </div>
+                                                                 <div>
+                                                                     <div className="text-sm font-medium leading-none">AI Pipes <span className="font-normal text-muted-foreground/80">(agents)</span></div>
+                                                                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground  mt-1">Deploy your AI agent as a serverless auto scalable API.</p>
+                                                                 </div>
+                                                             </a>
+                                                         </li>
+                                                         <li>
+                                                             <a className="flex select-none space-x-2 p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background rounded-[16px] justify-start items-center group" href="https://langbase.com/docs/memory">
+                                                                 <div className="size-12 bg-white/10 flex items-center justify-center px-1 rounded-xl min-w-[40px]">
+                                                                     <svg className="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                         <path d="M11 2.61268L10.6567 2.49825C9.5248 2.12095 8.28356 2.26863 7.27179 2.90099L5.58454 3.95552C4.59882 4.5716 4 5.65202 4 6.81443C4 7.24607 3.79677 7.65253 3.45146 7.91152L3.4 7.95011C2.51868 8.6111 2 9.64846 2 10.7501V12.2501C2 13.3518 2.51868 14.3891 3.4 15.0501C3.77771 15.3334 4 15.778 4 16.2501V16.8374C4 18.2165 4.71048 19.4984 5.88 20.2294L7.27179 21.0992C8.28356 21.7316 9.5248 21.8793 10.6567 21.502L11 21.3875V18.2426C11 17.7122 10.7893 17.2035 10.4142 16.8284L9.51804 15.9323C9.35282 15.9764 9.17916 16 9 16C7.89543 16 7 15.1046 7 14C7 12.8954 7.89543 12 9 12C10.1046 12 11 12.8954 11 14C11 14.1792 10.9764 14.3528 10.9323 14.518L11.8284 15.4142C12.5786 16.1644 13 17.1818 13 18.2426V21.3875L13.3433 21.502C14.4752 21.8793 15.7164 21.7316 16.7282 21.0992L18.12 20.2294C19.2895 19.4984 20 18.2165 20 16.8374V16.2501C20 15.778 20.2223 15.3334 20.6 15.0501C21.4813 14.3891 22 13.3518 22 12.2501V10.7501C22 9.64846 21.4813 8.6111 20.6 7.95011L20.5485 7.91152C20.2032 7.65253 20 7.24607 20 6.81443C20 5.65202 19.4012 4.5716 18.4155 3.95552L16.7282 2.90099C15.7164 2.26863 14.4752 2.12095 13.3433 2.49825L13 2.61268V5.75736C13 6.28779 13.2107 6.7965 13.5858 7.17157L14.482 8.06774C14.6472 8.02356 14.8208 8 15 8C16.1046 8 17 8.89543 17 10C17 11.1046 16.1046 12 15 12C13.8954 12 13 11.1046 13 10C13 9.82084 13.0236 9.64718 13.0677 9.48196L12.1716 8.58579C11.4214 7.83564 11 6.81823 11 5.75736V2.61268Z" fillRule="evenodd" clipRule="evenodd" fill="currentColor"></path>
+                                                                     </svg>
+                                                                 </div>
+                                                                 <div>
+                                                                     <div className="text-sm font-medium leading-none">AI Memory <span className="font-normal text-muted-foreground/80">(RAG)</span></div>
+                                                                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground  mt-1">Semantic RAG vector search API. Reduce hallucinations.</p>
+                                                                 </div>
+                                                             </a>
+                                                         </li>
+                                                         <li>
+                                                             <a className="flex select-none space-x-2 p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background rounded-[16px] justify-start items-center group" href="/models">
+                                                                 <div className="size-12 bg-white/10 flex items-center justify-center px-1 rounded-xl min-w-[40px]">
+                                                                     <svg className="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                         <path fillRule="evenodd" clipRule="evenodd" d="M10.5292 2.67995C11.4425 2.16625 12.5575 2.16625 13.4708 2.67995L19.4708 6.05495C19.6406 6.15045 19.7987 6.26107 19.9439 6.38459L12.0006 10.8528L4.0564 6.38432C4.20152 6.26091 4.35956 6.15038 4.52922 6.05495L10.5292 2.67995ZM3.05185 8.11396C3.01768 8.2953 3 8.48122 3 8.66968V15.3303C3 16.4141 3.58459 17.4137 4.52922 17.945L10.5292 21.32C10.6814 21.4056 10.8391 21.4769 11.0006 21.534V12.585L3.05185 8.11396ZM13.0006 21.5336C13.1617 21.4766 13.319 21.4054 13.4708 21.32L19.4708 17.945C20.4154 17.4137 21 16.4141 21 15.3303V8.66968C21 8.48136 20.9823 8.29558 20.9482 8.11436L13.0006 12.585V21.5336Z" fill="currentColor"></path>
+                                                                     </svg>
+                                                                 </div>
+                                                                 <div>
+                                                                     <div className="text-sm font-medium leading-none">LLM Models</div>
+                                                                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground  mt-1">Compare all the latest LLMs and their capabilities.</p>
+                                                                 </div>
+                                                             </a>
+                                                         </li>
+                                                         <li>
+                                                             <a className="flex select-none space-x-2 p-3 leading-none no-underline outline-none transition-colors duration-200 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background rounded-[16px] justify-start items-center group" href="/explore">
+                                                                 <div className="size-12 bg-white/10 flex items-center justify-center px-1 rounded-xl min-w-[40px]">
+                                                                     <svg className="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                         <path d="M8.7587 3H10C10.5523 3 11 3.44772 11 4V10C11 10.5523 10.5523 11 10 11H4C3.44772 11 3 10.5523 3 10V8.7587C2.99999 7.95374 2.99998 7.28937 3.04419 6.74818C3.09012 6.18608 3.18868 5.66937 3.43598 5.18404C3.81947 4.43139 4.43139 3.81947 5.18404 3.43598C5.66937 3.18868 6.18608 3.09012 6.74818 3.04419C7.28937 2.99998 7.95374 2.99999 8.7587 3Z" fill="currentColor"></path>
+                                                                         <path d="M17.2518 3.04419C17.8139 3.09012 18.3306 3.18868 18.816 3.43598C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C20.8113 5.66937 20.9099 6.18608 20.9558 6.74818C21 7.28937 21 7.95373 21 8.7587V10C21 10.5523 20.5523 11 20 11H14C13.4477 11 13 10.5523 13 10V4C13 3.44772 13.4477 3 14 3H15.2413C16.0463 2.99999 16.7106 2.99998 17.2518 3.04419Z" fill="currentColor"></path>
+                                                                         <path d="M3 14C3 13.4477 3.44772 13 4 13H10C10.5523 13 11 13.4477 11 14V20C11 20.5523 10.5523 21 10 21H8.7587C7.95373 21 7.28937 21 6.74818 20.9558C6.18608 20.9099 5.66937 20.8113 5.18404 20.564C4.43139 20.1805 3.81947 19.5686 3.43598 18.816C3.18868 18.3306 3.09012 17.8139 3.04419 17.2518C2.99998 16.7106 2.99999 16.0463 3 15.2413V14Z" fill="currentColor"></path>
+                                                                         <path fillRule="evenodd" clipRule="evenodd" d="M19.8284 14.1722C18.2663 12.6101 15.7337 12.6101 14.1716 14.1722C12.6095 15.7343 12.6095 18.2669 14.1716 19.829C15.4895 21.147 17.4983 21.353 19.0322 20.447L20.2929 21.7077C20.6834 22.0982 21.3166 22.0982 21.7071 21.7077C22.0976 21.3172 22.0976 20.684 21.7071 20.2935L20.4464 19.0328C21.3524 17.4989 21.1464 15.4901 19.8284 14.1722ZM15.5858 15.5864C16.3668 14.8053 17.6332 14.8053 18.4142 15.5864C19.1953 16.3674 19.1953 17.6338 18.4142 18.4148C17.6332 19.1959 16.3668 19.1959 15.5858 18.4148C14.8047 17.6338 14.8047 16.3674 15.5858 15.5864Z" fill="currentColor"></path>
+                                                                     </svg>
+                                                                 </div>
+                                                                 <div>
+                                                                     <div className="text-sm font-medium leading-none">Explore</div>
+                                                                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground  mt-1">Fork, run, build, and deploy to share with AI community.</p>
+                                                                 </div>
+                                                             </a>
+                                                         </li>
+                                                     </ul>
+                                                 </div>
+                                             </div>
+                                         )}
+                                     </div>
                                  </li>
                                  <li>
                                      <a href="https://command.new" target="_blank" className="group inline-flex h-9 w-max items-center justify-center rounded-full px-3 md:px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-foreground/50 [active]:text-background data-[state=open]:bg-foreground/50 data-[state=open]:text-background text-white/50 hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background" data-radix-collection-item="">
@@ -113,12 +204,87 @@ const Header = () => {
                  <div className={`w-full max-h-[80vh] flex-col overflow-scroll px-2 py-0 lg:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}>
                      <div className="flex-1 mt-6 w-full flex flex-col items-start justify-start space-y-4">
                          <div className="w-full">
-                             <button className="w-full text-left text-white/50 hover:text-white transition-colors ease-in-out duration-200 text-lg font-medium flex justify-between items-center py-2">
+                             <button 
+                                 onClick={toggleProducts}
+                                 className="w-full text-left text-white/50 hover:text-white transition-colors ease-in-out duration-200 text-lg font-medium flex justify-between items-center py-2"
+                             >
                                  Products
-                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}>
                                      <path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
                                  </svg>
                              </button>
+                             
+                             {/* Mobile Products Dropdown */}
+                             {isProductsOpen && (
+                                 <div className="mt-4 ml-4 space-y-3">
+                                     <a href="https://command.new" className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                                         <div className="size-10 bg-white/10 flex items-center justify-center rounded-lg">
+                                             <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                 <path d="M13 9.99989H18C18.5 8.99989 18 7.49989 18 7.49989L20.5379 7.70041C21.3806 7.76699 21.933 6.81384 21.4276 6.13617C20.385 4.73813 19.1707 3.43422 17.4966 2.91915C13.5483 1.70438 13.0654 7.49759 13 9.99989Z" fill="currentColor"></path>
+                                                 <path d="M3 10.9999C2.44772 10.9999 2 11.4476 2 11.9999C2 12.5522 2.44772 12.9999 3 12.9999H4V17.9999C4 20.209 5.79086 21.9999 8 21.9999H16C18.2091 21.9999 20 20.209 20 17.9999V12.9999H21C21.5523 12.9999 22 12.5522 22 11.9999C22 11.4476 21.5523 10.9999 21 10.9999H3Z" fill="currentColor"></path>
+                                                 <path d="M6 9.99989H11C10.7409 6.67343 9.84142 3.89667 7.94014 1.38552C7.50427 0.809827 6.62994 0.951013 6.38068 1.62871C5.43865 4.18998 5.15408 6.61621 6 9.99989Z" fill="currentColor"></path>
+                                             </svg>
+                                         </div>
+                                         <div>
+                                             <div className="text-sm font-medium">Command</div>
+                                             <div className="text-xs text-white/60">Vibe code any AI agent</div>
+                                         </div>
+                                     </a>
+                                     
+                                     <a href="https://langbase.com/docs/pipe" className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                                         <div className="size-10 bg-white/10 flex items-center justify-center rounded-lg">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-5">
+                                                 <path fillRule="evenodd" clipRule="evenodd" d="M2.25 4.125C2.25 3.08947 3.08947 2.25 4.125 2.25H9.375C10.4105 2.25 11.25 3.08947 11.25 4.125V17.25C11.25 19.7353 9.23528 21.75 6.75 21.75C4.26472 21.75 2.25 19.7353 2.25 17.25V4.125ZM6.75 18.375C7.37132 18.375 7.875 17.8713 7.875 17.25C7.875 16.6287 7.37132 16.125 6.75 16.125C6.12868 16.125 5.625 16.6287 5.625 17.25C5.625 17.8713 6.12868 18.375 6.75 18.375Z" fill="currentColor"></path>
+                                                 <path d="M10.719 21.75H19.8751C20.9106 21.75 21.7501 20.9105 21.7501 19.875V14.625C21.7501 13.5895 20.9106 12.75 19.8751 12.75H19.7353L10.9927 21.4926C10.9035 21.5818 10.8122 21.6676 10.719 21.75Z" fill="currentColor"></path>
+                                                 <path d="M12.7383 17.6255L19.2125 11.1512C19.9448 10.419 19.9448 9.23179 19.2125 8.49955L15.5002 4.78724C14.768 4.05501 13.5808 4.05501 12.8486 4.78724L12.7498 4.88598V17.25C12.7498 17.3761 12.7459 17.5013 12.7383 17.6255Z" fill="currentColor"></path>
+                                             </svg>
+                                         </div>
+                                         <div>
+                                             <div className="text-sm font-medium">AI Pipes</div>
+                                             <div className="text-xs text-white/60">Deploy AI agents as APIs</div>
+                                         </div>
+                                     </a>
+                                     
+                                     <a href="https://langbase.com/docs/memory" className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                                         <div className="size-10 bg-white/10 flex items-center justify-center rounded-lg">
+                                             <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                 <path d="M11 2.61268L10.6567 2.49825C9.5248 2.12095 8.28356 2.26863 7.27179 2.90099L5.58454 3.95552C4.59882 4.5716 4 5.65202 4 6.81443C4 7.24607 3.79677 7.65253 3.45146 7.91152L3.4 7.95011C2.51868 8.6111 2 9.64846 2 10.7501V12.2501C2 13.3518 2.51868 14.3891 3.4 15.0501C3.77771 15.3334 4 15.778 4 16.2501V16.8374C4 18.2165 4.71048 19.4984 5.88 20.2294L7.27179 21.0992C8.28356 21.7316 9.5248 21.8793 10.6567 21.502L11 21.3875V18.2426C11 17.7122 10.7893 17.2035 10.4142 16.8284L9.51804 15.9323C9.35282 15.9764 9.17916 16 9 16C7.89543 16 7 15.1046 7 14C7 12.8954 7.89543 12 9 12C10.1046 12 11 12.8954 11 14C11 14.1792 10.9764 14.3528 10.9323 14.518L11.8284 15.4142C12.5786 16.1644 13 17.1818 13 18.2426V21.3875L13.3433 21.502C14.4752 21.8793 15.7164 21.7316 16.7282 21.0992L18.12 20.2294C19.2895 19.4984 20 18.2165 20 16.8374V16.2501C20 15.778 20.2223 15.3334 20.6 15.0501C21.4813 14.3891 22 13.3518 22 12.2501V10.7501C22 9.64846 21.4813 8.6111 20.6 7.95011L20.5485 7.91152C20.2032 7.65253 20 7.24607 20 6.81443C20 5.65202 19.4012 4.5716 18.4155 3.95552L16.7282 2.90099C15.7164 2.26863 14.4752 2.12095 13.3433 2.49825L13 2.61268V5.75736C13 6.28779 13.2107 6.7965 13.5858 7.17157L14.482 8.06774C14.6472 8.02356 14.8208 8 15 8C16.1046 8 17 8.89543 17 10C17 11.1046 16.1046 12 15 12C13.8954 12 13 11.1046 13 10C13 9.82084 13.0236 9.64718 13.0677 9.48196L12.1716 8.58579C11.4214 7.83564 11 6.81823 11 5.75736V2.61268Z" fillRule="evenodd" clipRule="evenodd" fill="currentColor"></path>
+                                             </svg>
+                                         </div>
+                                         <div>
+                                             <div className="text-sm font-medium">AI Memory</div>
+                                             <div className="text-xs text-white/60">Semantic RAG vector search</div>
+                                         </div>
+                                     </a>
+                                     
+                                     <a href="/models" className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                                         <div className="size-10 bg-white/10 flex items-center justify-center rounded-lg">
+                                             <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                 <path fillRule="evenodd" clipRule="evenodd" d="M10.5292 2.67995C11.4425 2.16625 12.5575 2.16625 13.4708 2.67995L19.4708 6.05495C19.6406 6.15045 19.7987 6.26107 19.9439 6.38459L12.0006 10.8528L4.0564 6.38432C4.20152 6.26091 4.35956 6.15038 4.52922 6.05495L10.5292 2.67995ZM3.05185 8.11396C3.01768 8.2953 3 8.48122 3 8.66968V15.3303C3 16.4141 3.58459 17.4137 4.52922 17.945L10.5292 21.32C10.6814 21.4056 10.8391 21.4769 11.0006 21.534V12.585L3.05185 8.11396ZM13.0006 21.5336C13.1617 21.4766 13.319 21.4054 13.4708 21.32L19.4708 17.945C20.4154 17.4137 21 16.4141 21 15.3303V8.66968C21 8.48136 20.9823 8.29558 20.9482 8.11436L13.0006 12.585V21.5336Z" fill="currentColor"></path>
+                                             </svg>
+                                         </div>
+                                         <div>
+                                             <div className="text-sm font-medium">LLM Models</div>
+                                             <div className="text-xs text-white/60">Compare latest LLMs</div>
+                                         </div>
+                                     </a>
+                                     
+                                     <a href="/explore" className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+                                         <div className="size-10 bg-white/10 flex items-center justify-center rounded-lg">
+                                             <svg className="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                 <path d="M8.7587 3H10C10.5523 3 11 3.44772 11 4V10C11 10.5523 10.5523 11 10 11H4C3.44772 11 3 10.5523 3 10V8.7587C2.99999 7.95374 2.99998 7.28937 3.04419 6.74818C3.09012 6.18608 3.18868 5.66937 3.43598 5.18404C3.81947 4.43139 4.43139 3.81947 5.18404 3.43598C5.66937 3.18868 6.18608 3.09012 6.74818 3.04419C7.28937 2.99998 7.95374 2.99999 8.7587 3Z" fill="currentColor"></path>
+                                                 <path d="M17.2518 3.04419C17.8139 3.09012 18.3306 3.18868 18.816 3.43598C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C20.8113 5.66937 20.9099 6.18608 20.9558 6.74818C21 7.28937 21 7.95373 21 8.7587V10C21 10.5523 20.5523 11 20 11H14C13.4477 11 13 10.5523 13 10V4C13 3.44772 13.4477 3 14 3H15.2413C16.0463 2.99999 16.7106 2.99998 17.2518 3.04419Z" fill="currentColor"></path>
+                                                 <path d="M3 14C3 13.4477 3.44772 13 4 13H10C10.5523 13 11 13.4477 11 14V20C11 20.5523 10.5523 21 10 21H8.7587C7.95373 21 7.28937 21 6.74818 20.9558C6.18608 20.9099 5.66937 20.8113 5.18404 20.564C4.43139 20.1805 3.81947 19.5686 3.43598 18.816C3.18868 18.3306 3.09012 17.8139 3.04419 17.2518C2.99998 16.7106 2.99999 16.0463 3 15.2413V14Z" fill="currentColor"></path>
+                                                 <path fillRule="evenodd" clipRule="evenodd" d="M19.8284 14.1722C18.2663 12.6101 15.7337 12.6101 14.1716 14.1722C12.6095 15.7343 12.6095 18.2669 14.1716 19.829C15.4895 21.147 17.4983 21.353 19.0322 20.447L20.2929 21.7077C20.6834 22.0982 21.3166 22.0982 21.7071 21.7077C22.0976 21.3172 22.0976 20.684 21.7071 20.2935L20.4464 19.0328C21.3524 17.4989 21.1464 15.4901 19.8284 14.1722ZM15.5858 15.5864C16.3668 14.8053 17.6332 14.8053 18.4142 15.5864C19.1953 16.3674 19.1953 17.6338 18.4142 18.4148C17.6332 19.1959 16.3668 19.1959 15.5858 18.4148C14.8047 17.6338 14.8047 16.3674 15.5858 15.5864Z" fill="currentColor"></path>
+                                             </svg>
+                                         </div>
+                                         <div>
+                                             <div className="text-sm font-medium">Explore</div>
+                                             <div className="text-xs text-white/60">Fork, run, and deploy</div>
+                                         </div>
+                                     </a>
+                                 </div>
+                             )}
                          </div>
                          <div className="w-full h-[1px] bg-white/15"></div>
                          <a href="https://command.new" target="_blank" className="text-white/50 hover:text-white transition-colors ease-in-out duration-200 w-full text-lg font-medium py-2">Command</a>

@@ -21,13 +21,13 @@ export default function Features() {
   ];
 
   return (
-    <section className="group text-white h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-2">
+    <section className="group text-white h-full cursor-pointer relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[2.25rem] bg-black shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] transform-gpu col-span-4 lg:col-span-2 hover:[&_*]:[animation-play-state:paused]">
       <div className="w-full h-full z-1">
-        <div>
+            <div>
           <div className="absolute top-2.5">
             <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row absolute top-10 [--duration:50s]">
               {/* First row - forward direction */}
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
                 {features.slice(0, 6).map((feature, index) => (
                   <a key={`row1-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -40,7 +40,7 @@ export default function Features() {
                   </a>
                 ))}
               </div>
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
                 {features.slice(0, 6).map((feature, index) => (
                   <a key={`row1-dup-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -53,11 +53,11 @@ export default function Features() {
                   </a>
                 ))}
               </div>
-            </div>
+        </div>
 
             {/* Second row - reverse direction */}
             <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row absolute top-[6.25rem] [--duration:50s]">
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused] [animation-direction:reverse]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
                 {features.slice(6, 10).map((feature, index) => (
                   <a key={`row2-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -70,7 +70,7 @@ export default function Features() {
                   </a>
                 ))}
               </div>
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused] [animation-direction:reverse]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
                 {features.slice(6, 10).map((feature, index) => (
                   <a key={`row2-dup-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -84,10 +84,10 @@ export default function Features() {
                 ))}
               </div>
             </div>
-
+            
             {/* Third row - forward direction */}
             <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row absolute top-[9.75rem] [--duration:50s]">
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
                 {features.slice(10, 16).map((feature, index) => (
                   <a key={`row3-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -100,7 +100,7 @@ export default function Features() {
                   </a>
                 ))}
               </div>
-              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
                 {features.slice(10, 16).map((feature, index) => (
                   <a key={`row3-dup-${index}`} target="_blank" href={feature.href}>
                     <button className={`inline-flex items-center justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring-muted-foreground/25 focus:ring-1 focus:ring-muted-foreground/25 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer gap-2 group h-9 px-4 py-2 transition-transform duration-300 hover:scale-110 hover:bg-white hover:text-black !border-0 !ring-0 shadow-[0_2px_3px_0_theme(colors.black/65%),0_0_0_1px_theme(colors.white/10%),0_-1px_0_0_theme(colors.white/15%)] rounded-3xl ${
@@ -113,10 +113,10 @@ export default function Features() {
                   </a>
                 ))}
               </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Title & Description */}
       <div className="pointer-events-none flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
@@ -125,8 +125,8 @@ export default function Features() {
         </h3>
         <p className="mt-1 pr-[1rem] max-w-lg text-muted-foreground/90 line-clamp-3 sm:line-clamp-none">
           ⌘ Langbase is built for developers, not just AI/ML experts. Your current R&D team can do it. 10x innovation time-to-market.
-        </p>
-      </div>
+            </p>
+          </div>
 
       {/* Hover CTA */}
       <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 z-[999]">
